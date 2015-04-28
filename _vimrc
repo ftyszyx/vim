@@ -29,6 +29,7 @@ function MyDiff()
   silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
 endfunction
 
+
 " 开启文件类型侦测
 filetype on
 " 根据侦测到的不同类型加载对应的插件
@@ -81,6 +82,9 @@ set cursorcolumn
 " 高亮显示搜索结果
 set hlsearch
 
+
+"自动缩进
+set ai                     
 " 禁止折行(文本自动换行)
 set nowrap
 " 开启语法高亮功能
@@ -114,3 +118,9 @@ set foldmethod=indent
 " 启动 vim 时关闭折叠代码
 set foldenable
 "za，打开或关闭当前折叠；zM，关闭所有折叠；zR，打开所有折叠
+
+"使用utf-8或gbk打开文件
+set fileencodings=uft-8,gbk 
+
+"文件在Vim之外修改过，自动重新读入
+set autoread                
